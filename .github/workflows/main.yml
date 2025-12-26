@@ -24,12 +24,12 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      # 3️⃣ Build Backend
-      - name: Build Backend (Spring Boot)
+      # 3️⃣ Build Backend (Spring Boot)
+      - name: Build Backend
         working-directory: appointment
         run: |
-          chmod +x mvnw
-         ./mvnw clean install
+          chmod +x mvnw   # Give execute permission
+          ./mvnw clean install
 
       # 4️⃣ Set up Node.js for React
       - name: Set up Node.js
@@ -38,7 +38,7 @@ jobs:
           node-version: 20
 
       # 5️⃣ Build Frontend (React)
-      - name: Build Frontend (React)
+      - name: Build Frontend
         working-directory: appointment-frontend
         run: |
           npm install
