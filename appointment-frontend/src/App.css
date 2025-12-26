@@ -1,45 +1,54 @@
+/* Global */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
   min-height: 100vh;
-  color: #333;
+  background: linear-gradient(135deg, #5f72ff, #9b23ea);
+  color: #2c3e50;
 }
 
+/* Container */
 .container {
-  max-width: 850px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 20px;
 }
 
+/* Headings */
 h1 {
   text-align: center;
   color: #ffffff;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
 h2 {
-  color: #2c3e50;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  color: #3a3a3a;
 }
 
-/* Cards */
+/* Cards (Glassmorphism style) */
 .form-card,
 .list-card {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 28px;
+  border-radius: 16px;
   margin-bottom: 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
-/* Form */
+/* Form Inputs */
 form input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 14px;
-  border-radius: 8px;
+  padding: 13px 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
   border: 1px solid #ddd;
   font-size: 14px;
   transition: all 0.3s ease;
@@ -47,85 +56,101 @@ form input {
 
 form input:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+  border-color: #9b23ea;
+  box-shadow: 0 0 0 3px rgba(155, 35, 234, 0.2);
 }
 
-/* Buttons */
+/* Primary Button */
 .btn-primary {
   width: 100%;
-  padding: 12px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
+  padding: 13px;
+  background: linear-gradient(135deg, #5f72ff, #9b23ea);
+  color: #ffffff;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(95, 114, 255, 0.4);
 }
 
-/* Appointment list */
+/* Appointment List */
 .appointment-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 16px;
+  margin-bottom: 14px;
+  border-radius: 14px;
   background: linear-gradient(135deg, #fdfbfb, #ebedee);
-  padding: 14px;
-  border-radius: 10px;
-  margin-bottom: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.appointment-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Appointment Info */
 .info strong {
-  color: #34495e;
+  display: block;
+  font-size: 15px;
+  color: #2c3e50;
 }
 
 .info span {
-  display: block;
   font-size: 14px;
   color: #555;
 }
 
 .info small {
+  font-size: 12px;
   color: #777;
 }
 
-/* Action buttons */
+/* Action Buttons */
 .actions button {
-  margin-left: 8px;
-  padding: 7px 12px;
-  border-radius: 6px;
+  margin-left: 10px;
+  padding: 8px 14px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   font-size: 13px;
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 
+/* Edit Button */
 .btn-edit {
   background: linear-gradient(135deg, #f6d365, #fda085);
-  color: #333;
+  color: #3a3a3a;
 }
 
 .btn-edit:hover {
-  opacity: 0.85;
+  opacity: 0.9;
+  box-shadow: 0 5px 12px rgba(253, 160, 133, 0.5);
 }
 
+/* Delete Button */
 .btn-delete {
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  color: white;
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  color: #ffffff;
 }
 
 .btn-delete:hover {
-  opacity: 0.85;
+  opacity: 0.9;
+  box-shadow: 0 5px 12px rgba(255, 95, 109, 0.5);
 }
 
-/* Empty state */
+/* Empty State */
 .empty-text {
   text-align: center;
-  color: #666;
+  color: #777;
   font-style: italic;
+  margin-top: 10px;
 }
